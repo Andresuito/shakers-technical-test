@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  border-bottom: 1px solid #e4e7e7;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
