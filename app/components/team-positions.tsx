@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Card, Text, Badge, Button } from "@mantine/core";
+import { notifications } from "@mantine/notifications";
 import { IconCheck } from "@tabler/icons-react";
 import styles from "../style/TeamPositions.module.css";
 import type { Position, TeamPositionsProps } from "../types";
@@ -12,6 +13,8 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
   );
 
   const handleApplyToggle = (positionId: number) => {
+    const isCurrentlyApplied = appliedPositions.has(positionId);
+
     setAppliedPositions((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(positionId)) {
@@ -21,6 +24,26 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
       }
       return newSet;
     });
+
+    if (isCurrentlyApplied) {
+      notifications.show({
+        message: `Successfully withdrawn`,
+        styles: {
+          root: {
+            borderRadius: "6px",
+          },
+        },
+      });
+    } else {
+      notifications.show({
+        message: `Successfully applied`,
+        styles: {
+          root: {
+            borderRadius: "6px",
+          },
+        },
+      });
+    }
   };
 
   if (!positions || positions.length === 0) {

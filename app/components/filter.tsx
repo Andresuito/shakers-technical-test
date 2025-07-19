@@ -18,9 +18,10 @@ import { IconFilter } from "@tabler/icons-react";
 export default function Filter() {
   const icon = <IconFilter fill="#033028" size={16} />;
   const [opened, { open, close }] = useDisclosure(false);
-  
+
   const { filterOptions, loading } = useFilterOptions();
-  const { localFilters, setLocalFilters, clearFilters, applyFilters } = useFilters();
+  const { localFilters, setLocalFilters, clearFilters, applyFilters } =
+    useFilters();
 
   const handleApplyFilters = () => {
     applyFilters();
