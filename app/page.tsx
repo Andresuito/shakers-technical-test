@@ -2,7 +2,6 @@ import { Container, Grid, GridCol, Badge } from "@mantine/core";
 import Link from "next/link";
 import type { Project, SearchParams } from "./types";
 import styles from "./style/Home.module.css";
-import projectStyles from "./style/Home.module.css";
 import Filter from "./components/filter";
 import ActiveFilters from "./components/active-filters";
 
@@ -106,93 +105,41 @@ export default async function Home({
             <GridCol key={project.id} span={12}>
               <Link
                 href={`/projects/${project.id}`}
-                style={{ textDecoration: "none" }}
+                className={styles.projectLink}
               >
                 <div
-                  className={`${projectStyles.projectCard} ${projectStyles.projectCardAnimated}`}
+                  className={`${styles.projectCard} ${styles.projectCardAnimated}`}
                   style={{
                     animationDelay: `${index * 0.02}s`,
-                    cursor: "pointer",
                   }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                    }}
-                  >
-                    <div
-                      style={{
-                        marginRight: "16px",
-                        textAlign: "center",
-                      }}
-                    >
+                  <div className={styles.projectCardContainer}>
+                    <div className={styles.logoContainer}>
                       <img
                         src={project.organization.logo}
                         alt={project.organization.name}
-                        style={{
-                          width: "82px",
-                          height: "82px",
-                          borderRadius: "6px",
-                          objectFit: "contain",
-                          marginBottom: "6px",
-                        }}
+                        className={styles.logoImage}
                       />
                       <p
-                        style={{
-                          margin: 0,
-                          fontSize: "12px",
-                          fontWeight: "400",
-                          color: "#AEB7B4",
-                          maxWidth: "82px",
-                          whiteSpace: "nowrap",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          userSelect: "none",
-                        }}
+                        className={styles.organizationName}
                         title={project.organization.name}
                       >
                         {project.organization.name}
                       </p>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 12,
-                      }}
-                    >
-                      <p
-                        style={{
-                          margin: 0,
-                          fontSize: "18px",
-                          fontWeight: "400",
-                          color: "#2c3e50",
-                        }}
-                      >
+                    <div className={styles.contentContainer}>
+                      <p className={styles.projectTitle}>
                         {project.title}
                       </p>
 
                       {categoryIndustryBudgetInfo && (
-                        <p
-                          style={{
-                            margin: 0,
-                            fontSize: "14px",
-                            fontWeight: "400",
-                            color: "#0B5A4C",
-                          }}
-                        >
+                        <p className={styles.categoryInfo}>
                           {categoryIndustryBudgetInfo}
                         </p>
                       )}
 
                       {skillNames.length > 0 && (
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: 8,
-                            flexWrap: "wrap",
-                          }}
-                        >
+                        <div className={styles.skillsContainer}>
                           {skillNames.map((skill: any) => (
                             <div key={skill} className={styles.customBadge}>
                               {skill}

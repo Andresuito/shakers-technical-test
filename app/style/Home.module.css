@@ -55,3 +55,62 @@
   color: #181b1a;
   border-radius: 6px;
 }
+
+.projectLink {
+  text-decoration: none;
+}
+
+.projectCardContainer {
+  display: flex;
+}
+
+.logoContainer {
+  margin-right: 16px;
+  text-align: center;
+}
+
+.logoImage {
+  width: 82px;
+  height: 82px;
+  border-radius: 6px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.organizationName {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #aeb7b4;
+  max-width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projectTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #2c3e50;
+}
+
+.categoryInfo {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0b5a4c;
+}
+
+.skillsContainer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
