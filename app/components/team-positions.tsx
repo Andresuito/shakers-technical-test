@@ -31,6 +31,11 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
         styles: {
           root: {
             borderRadius: "6px",
+            backgroundColor: "#edf7f6",
+            color: "#033028",
+          },
+          closeButton: {
+            display: "none",
           },
         },
       });
@@ -40,6 +45,11 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
         styles: {
           root: {
             borderRadius: "6px",
+            backgroundColor: "#edf7f6",
+            color: "#033028",
+          },
+          closeButton: {
+            display: "none",
           },
         },
       });

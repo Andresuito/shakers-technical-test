@@ -89,16 +89,3 @@
   color: white;
   border: 1px solid #ca4810;
 }
-
-:global(.m_a513464) {
-  background-color: #edf7f6;
-  color: #033028;
-}
-
-:global(.m_a513464:before) {
-  display: none;
-}
-
-:global(.mantine-Notification-closeButton) {
-  display: none;
-}
