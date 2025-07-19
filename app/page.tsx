@@ -1,5 +1,6 @@
 import { Container, Grid, GridCol, Badge } from "@mantine/core";
 import Link from "next/link";
+import { IconChevronRight } from "@tabler/icons-react";
 import type { Project, SearchParams } from "./types";
 import styles from "./style/Home.module.css";
 import Filter from "./components/filter";
@@ -114,37 +115,42 @@ export default async function Home({
                   }}
                 >
                   <div className={styles.projectCardContainer}>
-                    <div className={styles.logoContainer}>
-                      <img
-                        src={project.organization.logo}
-                        alt={project.organization.name}
-                        className={styles.logoImage}
-                      />
-                      <p
-                        className={styles.organizationName}
-                        title={project.organization.name}
-                      >
-                        {project.organization.name}
-                      </p>
-                    </div>
-                    <div className={styles.contentContainer}>
-                      <p className={styles.projectTitle}>{project.title}</p>
-
-                      {categoryIndustryBudgetInfo && (
-                        <p className={styles.categoryInfo}>
-                          {categoryIndustryBudgetInfo}
+                    <div className={styles.cardContent}>
+                      <div className={styles.logoContainer}>
+                        <img
+                          src={project.organization.logo}
+                          alt={project.organization.name}
+                          className={styles.logoImage}
+                        />
+                        <p
+                          className={styles.organizationName}
+                          title={project.organization.name}
+                        >
+                          {project.organization.name}
                         </p>
-                      )}
+                      </div>
+                      <div className={styles.contentContainer}>
+                        <p className={styles.projectTitle}>{project.title}</p>
 
-                      {skillNames.length > 0 && (
-                        <div className={styles.skillsContainer}>
-                          {skillNames.map((skill: any) => (
-                            <div key={skill} className={styles.customBadge}>
-                              {skill}
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                        {categoryIndustryBudgetInfo && (
+                          <p className={styles.categoryInfo}>
+                            {categoryIndustryBudgetInfo}
+                          </p>
+                        )}
+
+                        {skillNames.length > 0 && (
+                          <div className={styles.skillsContainer}>
+                            {skillNames.map((skill: any) => (
+                              <div key={skill} className={styles.customBadge}>
+                                {skill}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <div className={styles.iconContainer}>
+                      <IconChevronRight size={18} />
                     </div>
                   </div>
                 </div>
