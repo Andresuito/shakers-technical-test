@@ -18,10 +18,10 @@ export class ProjectsService {
   ) {}
 
   async findAll(filters?: {
-    especialidades: string[];
-    habilidades: string[];
-    tipoProyecto: string[];
-    industrias: string[];
+    specialties: string[];
+    skills: string[];
+    projectType: string[];
+    industries: string[];
   }, sortOptions?: {
     sortOrder: 'asc' | 'desc';
   }): Promise<any[]> {
@@ -34,18 +34,18 @@ export class ProjectsService {
       const industries = await this.industryModel.find().exec();
       const specialties = await this.specialtyModel.find().exec();
       
-      if (filters.especialidades.length > 0) {
+      if (filters.specialties.length > 0) {
         const specialtyIds = specialties
-          .filter(specialty => filters.especialidades.includes(specialty.name))
+          .filter(specialty => filters.specialties.includes(specialty.name))
           .map(specialty => specialty.id);
         if (specialtyIds.length > 0) {
           mongoFilter.specialties = { $in: specialtyIds };
         }
       }
       
-      if (filters.habilidades.length > 0) {
+      if (filters.skills.length > 0) {
         const skillIds = skills
-          .filter(skill => filters.habilidades.includes(skill.name))
+          .filter(skill => filters.skills.includes(skill.name))
           .map(skill => skill.id);
         if (skillIds.length > 0) {
           mongoFilter.$or = [
@@ -55,18 +55,18 @@ export class ProjectsService {
         }
       }
       
-      if (filters.tipoProyecto.length > 0) {
+      if (filters.projectType.length > 0) {
         const categoryIds = categories
-          .filter(category => filters.tipoProyecto.includes(category.name))
+          .filter(category => filters.projectType.includes(category.name))
           .map(category => category.id);
         if (categoryIds.length > 0) {
           mongoFilter.category = { $in: categoryIds };
         }
       }
       
-      if (filters.industrias.length > 0) {
+      if (filters.industries.length > 0) {
         const industryIds = industries
-          .filter(industry => filters.industrias.includes(industry.name))
+          .filter(industry => filters.industries.includes(industry.name))
           .map(industry => industry.id);
         if (industryIds.length > 0) {
           mongoFilter['organization.industry'] = { $in: industryIds };

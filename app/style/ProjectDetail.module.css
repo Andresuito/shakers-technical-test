@@ -32,11 +32,25 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 16px 20px;
+  }
+}
+
 .heroHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .heroHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }
 
 .heroTitle {
@@ -51,6 +65,12 @@
   gap: 6px;
 }
 
+@media (max-width: 768px) {
+  .industryBadge {
+    display: none;
+  }
+}
+
 .industryText {
   color: #181b1a;
 }
@@ -58,6 +78,18 @@
 .categoryText {
   color: #ffffff;
   margin-bottom: 24px;
+}
+
+.infoBadgesContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .infoBadgesContainer {
+    gap: 8px;
+  }
 }
 
 .infoBadge {
@@ -97,9 +129,22 @@
   align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+  .teamSection {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
 .responsibleSection {
   max-width: 300px;
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .responsibleSection {
+    max-width: 100%;
+  }
 }
 
 .responsibleTitle {

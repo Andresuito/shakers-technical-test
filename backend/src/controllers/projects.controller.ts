@@ -3,10 +3,10 @@ import { ProjectsService } from "../services/projects.service";
 import { Project } from "../schemas/project.schema";
 
 interface FilterQuery {
-  especialidades?: string;
-  habilidades?: string;
-  tipoProyecto?: string;
-  industrias?: string;
+  specialties?: string;
+  skills?: string;
+  projectType?: string;
+  industries?: string;
   sortOrder?: 'asc' | 'desc';
 }
 
@@ -17,10 +17,10 @@ export class ProjectsController {
   @Get()
   async findAll(@Query() query: FilterQuery): Promise<Project[]> {
     const filters = {
-      especialidades: query.especialidades ? query.especialidades.split(',') : [],
-      habilidades: query.habilidades ? query.habilidades.split(',') : [],
-      tipoProyecto: query.tipoProyecto ? query.tipoProyecto.split(',') : [],
-      industrias: query.industrias ? query.industrias.split(',') : []
+      specialties: query.specialties ? query.specialties.split(',') : [],
+      skills: query.skills ? query.skills.split(',') : [],
+      projectType: query.projectType ? query.projectType.split(',') : [],
+      industries: query.industries ? query.industries.split(',') : []
     };
     
     const sortOptions = query.sortOrder ? {
