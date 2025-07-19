@@ -12,21 +12,20 @@ export const useFilterOptions = () => {
   });
   const [loading, setLoading] = useState(false);
 
+  const BASE_URL =
+    process.env.NODE_ENV === "development"
+      ? process.env.NEXT_PUBLIC_BACKEND_URL
+      : "";
+
   useEffect(() => {
     const fetchFilterOptions = async () => {
       setLoading(true);
       try {
         const [specialties, skills, categories, industries] = await Promise.all([
-          fetch("http://localhost:3001/api/specialties").then((res) =>
-            res.json()
-          ),
-          fetch("http://localhost:3001/api/skills").then((res) => res.json()),
-          fetch("http://localhost:3001/api/categories").then((res) =>
-            res.json()
-          ),
-          fetch("http://localhost:3001/api/industries").then((res) =>
-            res.json()
-          ),
+          fetch(`${BASE_URL}/api/specialties`).then((res) => res.json()),
+          fetch(`${BASE_URL}/api/skills`).then((res) => res.json()),
+          fetch(`${BASE_URL}/api/categories`).then((res) => res.json()),
+          fetch(`${BASE_URL}/api/industries`).then((res) => res.json()),
         ]);
 
         setFilterOptions({
@@ -55,7 +54,7 @@ export const useFilterOptions = () => {
     };
 
     fetchFilterOptions();
-  }, []);
+  }, [BASE_URL]);
 
   return { filterOptions, loading };
 };
