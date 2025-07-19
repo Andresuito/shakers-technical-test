@@ -137,12 +137,13 @@
 }
 
 .responsibleSection {
-  max-width: 300px;
-  flex-shrink: 0;
+  max-width: 100%;
+  width: 300px;
 }
 
 @media (max-width: 768px) {
   .responsibleSection {
+    width: 100%;
     max-width: 100%;
   }
 }
@@ -168,8 +169,15 @@
 }
 
 .avatarImage {
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .avatarImage {
+    width: 100%;
+  }
 }
 
 .leaderName {
@@ -190,4 +198,15 @@
 .teamTitle {
   color: #033028;
   margin-bottom: 16px;
+}
+
+.teamCard {
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .teamCard {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -108,6 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 300px;
 }
 
 .projectTitle {
@@ -130,38 +131,41 @@
   flex-wrap: wrap;
 }
 
-/* Responsive Design - Mobile */
 @media (max-width: 768px) {
   .iconContainer {
     display: none;
   }
-  
+
   .cardContent {
     padding: 16px;
   }
-  
+
   .logoImage {
     width: 80px;
     height: 80px;
   }
-  
+
   .logoContainer {
     margin-right: 12px;
   }
-  
+
+  .contentContainer {
+    max-width: none;
+  }
+
   .skillsContainer {
     width: 100%;
     gap: 6px;
   }
-  
+
   .projectTitle {
     font-size: 16px;
   }
-  
+
   .categoryInfo {
     font-size: 13px;
   }
-  
+
   .customBadge {
     padding: 4px 6px;
     font-size: 11px;
