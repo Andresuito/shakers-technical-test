@@ -7,40 +7,73 @@
 }
 
 .modalHeader {
+  padding: 40px 40px 24px 40px;
 }
 
 .modalTitle {
+  font-size: 24px;
+  color: #0d0d0d;
 }
 
 .modalBody {
+  padding: 0px 40px 40px 40px;
 }
 
 .label {
+  font-size: 16px;
+  color: #033028;
+  margin-bottom: 6px;
 }
 
 .pillInput {
+  border-radius: 6px;
 }
 
 .pill {
+  border-radius: 6px;
+  background-color: #edf7f6;
+  color: #033028;
 }
 
 .orderTitle {
-}
-
-.checkboxRoot {
-}
-
-.checkboxLabel {
+  margin-bottom: 6px;
 }
 
 .checkboxInput {
+  border-radius: 50%;
+}
+
+.checkboxInput:checked {
+  border: none;
+  background-color: #033028;
 }
 
 .buttonContainer {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
 }
 
 .clearButton {
+  border: none;
+  color: #ca4810;
+  flex: 1;
+}
+
+.clearButton:hover {
+  background-color: #ca4810;
+  transition: background-color 0.2s ease-in-out;
+  color: #fff;
+  flex: 1;
 }
 
 .applyButton {
+  background-color: #033028;
+  color: #fff;
+  padding: 12px 0;
+  flex: 1;
+}
+
+.applyButton:hover {
+  background-color: #033028;
 }

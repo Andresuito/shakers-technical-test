@@ -154,8 +154,6 @@ export default function Filter() {
                         });
                       }}
                       classNames={{
-                        root: styles.checkboxRoot,
-                        label: styles.checkboxLabel,
                         input: styles.checkboxInput,
                       }}
                     />
@@ -169,8 +167,6 @@ export default function Filter() {
                         });
                       }}
                       classNames={{
-                        root: styles.checkboxRoot,
-                        label: styles.checkboxLabel,
                         input: styles.checkboxInput,
                       }}
                     />
