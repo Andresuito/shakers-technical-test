@@ -1,0 +1,148 @@
+.breadcrumbContainer {
+  margin: 24px 0px;
+  align-items: center;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 12px;
+  color: #033028;
+  text-decoration: none;
+}
+
+.backIcon {
+  color: #033028;
+}
+
+.breadcrumbText {
+  color: #555e5c;
+}
+
+.breadcrumbTitle {
+  color: #181b1a;
+  font-style: italic;
+}
+
+.heroSection {
+  background-color: #033028;
+  padding: 24px 40px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
+.heroHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  color: #ffffff;
+  margin: 0;
+}
+
+.industryBadge {
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  gap: 6px;
+}
+
+.industryText {
+  color: #181b1a;
+}
+
+.categoryText {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.infoBadge {
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  gap: 6px;
+}
+
+.infoText {
+  color: #181b1a;
+}
+
+.descriptionCard {
+  padding: 0;
+}
+
+.sectionTitle {
+  color: #033028;
+  margin-bottom: 12px;
+}
+
+.descriptionText {
+  color: #555e5c;
+  font-size: 14px;
+}
+
+.goalText {
+  color: #555e5c;
+  font-size: 14px;
+}
+
+.teamSection {
+  margin-top: 64px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.responsibleSection {
+  max-width: 300px;
+  flex-shrink: 0;
+}
+
+.responsibleTitle {
+  color: #033028;
+  margin-bottom: 16px;
+}
+
+.organizationInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.organizationLogo {
+  border-radius: 4px;
+}
+
+.organizationName {
+  color: #033028;
+}
+
+.avatarImage {
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.leaderName {
+  line-clamp: 1;
+  color: #181b1a;
+  font-size: 20px;
+}
+
+.leaderTitle {
+  font-size: 16px;
+  color: #555e5c;
+}
+
+.teamContainer {
+  flex: 1;
+}
+
+.teamTitle {
+  color: #033028;
+  margin-bottom: 16px;
+}

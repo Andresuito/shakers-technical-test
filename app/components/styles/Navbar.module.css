@@ -1,11 +1,12 @@
 .nav {
+  border-bottom: 1px solid #e4e7e7;
+  padding-block: 20px;
+}
+
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 20px;
-  border-bottom: 1px solid #e4e7e7;
-  padding-right: 40px;
-  padding-left: 40px;
 }
 
 .title {

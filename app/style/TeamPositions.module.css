@@ -1,0 +1,81 @@
+.positionsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.noPositionsText {
+  color: #666;
+}
+
+.positionCard {
+  max-width: 300px;
+  flex: 1 1 280px;
+  min-width: 280px;
+}
+
+.appliedBadge {
+  margin-bottom: 16px;
+}
+
+.appliedBadgeContent {
+  background-color: #f8f9ec;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #181b1a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+}
+
+.positionTitle {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skillsContainer {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.skillTag {
+  color: #555e5c;
+  font-size: 14px;
+}
+
+.applyButton {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.applyButtonDefault {
+  background-color: #f0ff3d;
+  color: #000000;
+  border: none;
+}
+
+.applyButtonDefault:hover {
+  background-color: #f0ff3d;
+  color: #000000;
+}
+
+.applyButtonApplied {
+  background-color: transparent;
+  color: #ca4810;
+  border: 1px solid #ca4810;
+}
+
+.applyButtonApplied:hover {
+  background-color: #ca4810;
+  color: white;
+  border: 1px solid #ca4810;
+}

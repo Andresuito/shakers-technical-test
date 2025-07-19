@@ -1,0 +1,58 @@
+.container {
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background-color: #edf7f6;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out,
+    padding 0.4s ease-in-out;
+}
+
+.visible {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.hidden {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  color: #181b1a;
+  margin: 0 0 16px 0;
+}
+
+.categoryLabel {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555e5c;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.filtersGroup {
+  display: inline-flex;
+  margin-left: 8px;
+}
+
+.filterButton {
+  background-color: #ffffff;
+  color: #033028;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #ffffff;
+  color: #033028;
+}
+
+.filterButton .rightSection {
+  margin-left: 4px;
+}
