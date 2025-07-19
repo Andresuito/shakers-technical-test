@@ -25,7 +25,9 @@ import type { ProjectDetail } from "../../types";
 
 async function fetchProject(id: string): Promise<ProjectDetail | null> {
   try {
-    const response = await fetch(`http://localhost:3001/api/projects/${id}`);
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/projects/${id}`
+    );
     if (!response.ok) {
       return null;
     }
@@ -87,7 +89,7 @@ export default async function ProjectDetail({
           {project.categoryName}
         </Text>
 
-        <Group gap="lg">
+        <div className={styles.infoBadgesContainer}>
           <Group className={styles.infoBadge}>
             <IconCalendar size={16} />
             <Text size="sm" className={styles.infoText}>
@@ -117,7 +119,7 @@ export default async function ProjectDetail({
               {project.positions?.length || 0} positions
             </Text>
           </Group>
-        </Group>
+        </div>
       </div>
 
       <Stack gap="md">

@@ -44,7 +44,7 @@ async function fetchProjects(searchParams: SearchParams): Promise<Project[]> {
   }
 
   const queryString = params.toString();
-  const url = `http://localhost:3001/api/projects${
+  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/projects${
     queryString ? `?${queryString}` : ""
   }`;
 
@@ -128,9 +128,7 @@ export default async function Home({
                       </p>
                     </div>
                     <div className={styles.contentContainer}>
-                      <p className={styles.projectTitle}>
-                        {project.title}
-                      </p>
+                      <p className={styles.projectTitle}>{project.title}</p>
 
                       {categoryIndustryBudgetInfo && (
                         <p className={styles.categoryInfo}>
