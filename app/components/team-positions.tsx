@@ -26,7 +26,7 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
   if (!positions || positions.length === 0) {
     return (
       <Card padding="lg" radius="md">
-        <Text className={styles.noPositionsText}>No hay posiciones disponibles</Text>
+        <Text className={styles.noPositionsText}>No positions available</Text>
       </Card>
     );
   }
@@ -48,25 +48,19 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
               <div className={styles.appliedBadge}>
                 <div className={styles.appliedBadgeContent}>
                   <IconCheck size={16} />
-                  Aplicado
+                  Applied
                 </div>
               </div>
             )}
 
-            <Text
-              className={styles.positionTitle}
-              fw={400}
-            >
+            <Text className={styles.positionTitle} fw={400}>
               {position.title}
             </Text>
 
             {position.skillNames.length > 0 && (
               <div className={styles.skillsContainer}>
                 {position.skillNames.map((skill, index) => (
-                  <span
-                    key={index}
-                    className={styles.skillTag}
-                  >
+                  <span key={index} className={styles.skillTag}>
                     {skill}
                   </span>
                 ))}
@@ -76,10 +70,12 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
             <Button
               onClick={() => handleApplyToggle(position.id)}
               className={`${styles.applyButton} ${
-                isApplied ? styles.applyButtonApplied : styles.applyButtonDefault
+                isApplied
+                  ? styles.applyButtonApplied
+                  : styles.applyButtonDefault
               }`}
             >
-              {isApplied ? "Retirar Candidatura" : "Aplicar"}
+              {isApplied ? "Withdraw Application" : "Apply"}
             </Button>
           </Card>
         );

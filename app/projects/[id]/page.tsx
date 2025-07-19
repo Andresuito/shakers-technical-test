@@ -55,7 +55,7 @@ export default async function ProjectDetail({
     : "Budget not specified";
 
   return (
-    <Container size={1360}>
+    <Container size={1360} style={{ marginBottom: "40px" }}>
       <Group gap="xs" className={styles.breadcrumbContainer}>
         <Anchor component={Link} href="/" className={styles.backLink}>
           <IconArrowLeft size={16} className={styles.backIcon} />
