@@ -1,6 +1,6 @@
 import { Container, Grid, GridCol, Badge } from "@mantine/core";
 import Link from "next/link";
-import { IconChevronRight } from "@tabler/icons-react";
+import { IconArrowBadgeRightFilled } from "@tabler/icons-react";
 import type { Project, SearchParams } from "./types";
 import styles from "./style/Home.module.css";
 import Filter from "./components/filter";
@@ -150,7 +150,7 @@ export default async function Home({
                       </div>
                     </div>
                     <div className={styles.iconContainer}>
-                      <IconChevronRight size={18} />
+                      <IconArrowBadgeRightFilled fill="#033028" size={24} />
                     </div>
                   </div>
                 </div>
