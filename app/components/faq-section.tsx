@@ -78,7 +78,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
         order={3}
         style={{ color: "#033028", marginBottom: "12px", marginTop: "40px" }}
       >
-        Preguntas Frecuentes
+        FAQ
       </Title>
       <Stack gap="xs">
         {faqs.map((faq, index) => (
