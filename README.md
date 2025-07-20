@@ -1,27 +1,45 @@
-# Shakers Technical Test
+# 🧪 Shakers Technical Test
 
-## Installation
+Este proyecto consiste en una aplicación full-stack dividida en dos partes:
 
-bun i to install dependencies of **frontend**
+- **Frontend**: Aplicación construida con Next.js 15 y Mantine UI.
+- **Backend**: API REST desarrollada con NestJS conectada a una base de datos MongoDB.
 
-cd backend
-npm i to install dependencies of **backend**
+🚀 Deploy: [https://shakers-technical-test.vercel.app](https://shakers-technical-test.vercel.app)
 
-## Getting Started
+---
 
-**Frontend**
+## 📦 Tecnologías Principales
 
-```bash
-bun dev
+### Frontend
+
+- **Next.js 15**
+- **React 19**
+- **Mantine UI 8**
+- **nuqs**
+- **@tabler/icons-react**
+
+---
+
+### Backend
+
+- **NestJS 11**
+- **MongoDB + Mongoose 8**
+
+---
+
+## 🧠 Base de Datos
+
+Este proyecto utiliza **MongoDB** como sistema de almacenamiento principal, integrado mediante **Mongoose** en el backend NestJS.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+shakers-technical-test/
+├── frontend/     → App Next.js + Mantine UI
+└── backend/      → API REST con NestJS + MongoDB
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-**Backend**
-
-```bash
-cd backend
-npm run start
-```
-
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+---
