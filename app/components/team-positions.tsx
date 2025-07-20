@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { Card, Text, Badge, Button } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
-import { IconCheck } from "@tabler/icons-react";
+import { IconCheck, IconX } from "@tabler/icons-react";
 import styles from "../style/TeamPositions.module.css";
-import type { Position, TeamPositionsProps } from "../types";
+import type { TeamPositionsProps } from "../types";
 
 export default function TeamPositions({ positions }: TeamPositionsProps) {
   const [appliedPositions, setAppliedPositions] = useState<Set<number>>(
@@ -27,30 +27,24 @@ export default function TeamPositions({ positions }: TeamPositionsProps) {
 
     if (isCurrentlyApplied) {
       notifications.show({
-        message: `Successfully withdrawn`,
-        styles: {
-          root: {
-            borderRadius: "6px",
-            backgroundColor: "#edf7f6",
-            color: "#033028",
-          },
-          closeButton: {
-            display: "none",
-          },
+        withCloseButton: false,
+        message: "Successfully withdrawn",
+        color: "transparent",
+        style: {
+          borderRadius: "6px",
+          backgroundColor: "#edf7f6",
+          color: "#033028",
         },
       });
     } else {
       notifications.show({
-        message: `Successfully applied`,
-        styles: {
-          root: {
-            borderRadius: "6px",
-            backgroundColor: "#edf7f6",
-            color: "#033028",
-          },
-          closeButton: {
-            display: "none",
-          },
+        withCloseButton: false,
+        message: "Successfully applied",
+        color: "transparent",
+        style: {
+          borderRadius: "6px",
+          backgroundColor: "#edf7f6",
+          color: "#033028",
         },
       });
     }
