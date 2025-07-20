@@ -2,15 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['logo.clearbit.com']
+    domains: ['logo.clearbit.com'],
+    unoptimized: true,
   },
-  webpack: (config) => {
-    config.watchOptions = {
-      ...config.watchOptions,
-      ignored: ['**/backend/**']
-    };
-    return config;
-  },
+    turbopack: {
+      rules: {
+        '**backend/**': ['ignore']
+    }
+  }
 };
 
 export default nextConfig;
