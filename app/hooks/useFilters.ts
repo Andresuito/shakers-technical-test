@@ -57,20 +57,23 @@ export const useFilters = () => {
   };
 
   const removeFilter = (filterType: keyof FilterState, valueToRemove: string) => {
-    if (Array.isArray(urlFilters[filterType])) {
+    const current = urlFilters[filterType];
+
+    if (Array.isArray(current)) {
       setUrlFilters({
-        [filterType]: (urlFilters[filterType] as string[]).filter(
-          (value) => value !== valueToRemove
-        ),
+        [filterType]: current.filter((value) => value !== valueToRemove),
+      });
+    } else if (typeof current === "string" && current === valueToRemove) {
+      setUrlFilters({
+        [filterType]: "",
       });
     }
   };
 
-  const hasActiveFilters = 
-    urlFilters.specialties.length > 0 ||
-    urlFilters.skills.length > 0 ||
-    urlFilters.projectType.length > 0 ||
-    urlFilters.industries.length > 0;
+  const hasActiveFilters = Object.values(urlFilters).some((value) => {
+    if (Array.isArray(value)) return value.length > 0;
+    return value !== "";
+  });
 
   return {
     urlFilters,
